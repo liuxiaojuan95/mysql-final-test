@@ -50,10 +50,10 @@ create table ts4(
       ename varchar(45),
       job   varchar(45),
       mgr   varchar(45),
-      hiredate  date，
+      hiredate  Date，
       sal  float,
       comm  int(11),
-      dempno int(11)
+      dempno int(11),
       primary key(empno)
       );
       
@@ -208,6 +208,8 @@ show grants for 'liuxiaojuan'@'%';
 2）多格式的数据存储；
 
 3）对查询速度要求快的数据存储；
+
+
 因为关系型数据库适用于
 1）需要做复杂处理的数据；
 
