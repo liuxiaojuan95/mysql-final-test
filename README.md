@@ -73,8 +73,7 @@ create table ts4(
 	(7934, "MILLER", "CLERK", 7782, "1981-03-12", 1300, NULL, 10);
 select * from ts5;
 ```
-![](https://github.com/liuxiaojuan95/homework/blob/master/images/2.2.png)
-
+![]
 3.1 表2 中再插入一条记录：
 ```sql
  insert into ts5(empno, ename,job,mgr,hiredate,sal,comm,dempno)
