@@ -30,7 +30,7 @@ create table ts4(
           deptno int(11),
           dname varchar(45),  
            loc  varchar(45),
-          primary key（depno)
+          primary key(depno)
      );
     
     insert into ts4(depno,dname,loc)
