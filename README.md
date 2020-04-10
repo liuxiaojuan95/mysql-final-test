@@ -117,11 +117,16 @@ select * from ts5;
 
 3.7 建立一个视图：每个人的empno, ename, job。简述为什么要建立本视图。
 ```sql
-    create view v1
+    create view v5
     as
     select empno,ename,job
     from ts5;
+    
+    select * from v5;
  ```
+ 
+ 
+ 
  **原因**：为了透过本视图看到自己感兴趣的数据及其变化
  
  
