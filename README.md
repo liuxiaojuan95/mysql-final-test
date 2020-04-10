@@ -211,6 +211,7 @@ select * from ts5;
 4 建立一个新用户，账号为自己的姓名拼音，密码为自己的学号；
 ```sql
     create user 'liuxiaojuan'@'%' identified by'17202207';
+```
 4.1 将表1的SELECT, INSERT, UPDATE(ename)权限赋给该账号。
 ```sql 
     grant select,insert,update(ename) to test 'liuxiaojuan'@'%' identified by'17202207';
