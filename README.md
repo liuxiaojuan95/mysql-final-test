@@ -190,7 +190,7 @@ select * from ts5;
     create user 'liuxiaojuan'@'%' identified by'17202207';
 4.1 将表1的SELECT, INSERT, UPDATE(ename)权限赋给该账号。
 ```sql 
-    grant select,insert,update(ename) to test'liuxiaojuan'@'%' identified by'17202207';
+    grant select,insert,update(ename) to test 'liuxiaojuan'@'%' identified by'17202207';
 ```
 4.2 显示该账号权限
 ```sql
