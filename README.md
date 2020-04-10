@@ -33,7 +33,7 @@ create table ts4(
           primary key(deptno)
      );
     
-    insert into ts4(depno,dname,loc)
+    insert into ts4(deptno,dname,loc)
      values(10, "ACCOUNTING", "NEW YORK"),
            (20, "RESEARCH", "DALLAS"),
            (30, "SALES", "CHICAGO"),
