@@ -108,7 +108,7 @@ select * from ts5;
 3.6 显示每个人的下属, 没有下属的显示 NULL。本操作使用关系代数中哪几种运算？
 ```sql
    select *
-   from ((ts5 t1 inner join ts5 t2 on t1.mgr=t2.empno) inner join t3 on t2.mgr=t3.empno) inner join t4 
+   from ((ts5 t1 inner join ts5 t2 on t1.mgr=t2.empno) inner join ts5 t3 on t2.mgr=t3.empno) inner join ts5 t4 
    on t3.mgr=t4.empno;
 ```
 使用了内连接
