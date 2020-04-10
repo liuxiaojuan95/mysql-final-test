@@ -53,7 +53,7 @@ create table ts4(
       ename varchar(45),
       job   varchar(45),
       mgr   varchar(45),
-      hiredate  datetime，
+      hiredate  date，
       sal  float,
       comm  int(11),
       dempno int(11)
