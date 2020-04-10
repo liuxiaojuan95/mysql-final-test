@@ -57,7 +57,7 @@ create table ts4(
       primary key(empno)
       );
       
-   insert into table ts5(empno, ename,job,mgr,hiredate,sal,comm, dempno)
+   insert into ts5 (empno, ename,job,mgr,hiredate,sal,comm, dempno)
         values(7369, "SMITH", "CLERK", 7902, "1981-03-12", 800.00, NULL, 20),
 	(7499, "ALLEN", "SALESMAN", 7698, "1982-03-12", 1600, 300, 30),
 	(7521, "WARD", "SALESMAN", 7698, "1838-03-12", 1250, 500, 30),
@@ -73,11 +73,11 @@ create table ts4(
 	(7934, "MILLER", "CLERK", 7782, "1981-03-12", 1300, NULL, 10);
 select * from ts5;
 ```
-
+![](https://github.com/liuxiaojuan95/homework/blob/master/images/2.2.png)
 
 3.1 表2 中再插入一条记录：
 ```sql
- insert into ts5(empno, ename,    job,    MGR,   Hiredate,    sal,   comm, dempno)
+ insert into ts5(empno, ename,job,mgr,hiredate,sal,comm,dempno)
           values(17202207,'liuxiaojuan,'student', 7782, "1999-07-16", NULL, NULL, 10);
 select * from ts5;
 ```
