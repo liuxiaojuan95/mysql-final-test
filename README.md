@@ -94,9 +94,9 @@ select * from ts5;
 3.4 将 MILLER 的 comm 增加 100； 然后，找到 comm 比 MILLER 低的人；
 ```sql
    update ts5
-   set comm=comm+100 where ename='mitter';
+   set comm=100 where ename='miller';
    
-   select * from ts5 where comm<= (select sal from ts5 where ename='mitter');
+   select * from ts5 where comm< (select comm from ts5 where ename='miller');
 ```
 
 
