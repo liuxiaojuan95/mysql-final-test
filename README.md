@@ -42,10 +42,7 @@ create table ts4(
 ```
 
 
-**结果**
 
-
-![]()
 表2：其中empno字段为主键
 ```sql
  create table ts5(
@@ -77,10 +74,7 @@ create table ts4(
 select * from ts5;
 ```
 
-**结果**
 
-
-![]()
 3.1 表2 中再插入一条记录：
 ```sql
  insert into ts5(empno, ename,    job,    MGR,   Hiredate,    sal,   comm, deptno)
@@ -88,20 +82,14 @@ select * from ts5;
 select * from ts5;
 ```
 
-**结果**
 
-
-![]()
 3.2 表中入职时间（Hiredate字段）最短的人。
 ```sql
    select ename,min(hiredate) from ts5;
 ```
 
 
-**结果**
 
-
-![]()
 3.3 有几种职位（job字段）？在关系代数中，本操作是什么运算？
 
 3.4 将 MILLER 的 comm 增加 100； 然后，找到 comm 比 MILLER 低的人；
@@ -113,10 +101,7 @@ select * from ts5;
 ```
 
 
-**结果**
 
-
-![]()
 
 
 3.5 计算每个人的收入(ename, sal + comm)；计算总共有多少人；计算所有人的平均收入。 提示：计算时 NULL 要当做 0 处理； 
@@ -130,10 +115,7 @@ select * from ts5;
 使用了内连接
 
 
-**结果**
 
-
-![]()
 3.7 建立一个视图：每个人的empno, ename, job 和 loc。简述为什么要建立本视图。
 ```sql
     create view v1
@@ -144,10 +126,7 @@ select * from ts5;
  **原因**：为了透过本视图看到自己感兴趣的数据及其变化
  
  
-**结果**
 
-
-![]()
 
 3.8 为表2增加一个约束：deptno字段需要在表1中存在；这称做什么完整性？
 ```sql
@@ -184,11 +163,16 @@ select * from ts5;
 
 
 4 建立一个新用户，账号为自己的姓名拼音，密码为自己的学号；
-
+```sql
+    create user 'liuxiaojuan'@'%' identified by'17202207';
 4.1 将表1的SELECT, INSERT, UPDATE(ename)权限赋给该账号。
-
+```sql 
+    grant select,insert,update(ename) to test'liuxiaojuan'@'%' identified by'17202207';
+```
 4.2 显示该账号权限
-
+```sql
+show grants for 'liuxiaojuan'@'%';
+```
 4.3 `with grant option` 是什么意思。
 **答**：将权限再授予他人
 
