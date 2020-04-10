@@ -50,8 +50,8 @@ create table ts4(
       ename varchar(45),
       job   varchar(45),
       mgr   varchar(45),
-      hiredate  Date，
-      sal  float,
+      hiredate Date
+      sal float,
       comm  int(11),
       dempno int(11),
       primary key(empno)
