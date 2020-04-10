@@ -60,6 +60,7 @@ create table ts4(
 ```
 
 
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/1.png)
 
 表2：其中empno字段为主键
 ```sql
@@ -91,7 +92,9 @@ create table ts4(
 	(7934, "MILLER", "CLERK", 7782, "1981-03-12", 1300, NULL, 10);
 select * from ts5;
 ```
-![]
+
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/2.png)
+
 3.1 表2 中再插入一条记录：
 ```sql
  insert into ts5(empno, ename,job,mgr,hiredate,sal,comm,dempno)
@@ -99,6 +102,7 @@ select * from ts5;
 select * from ts5;
 ```
 
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/3.png)
 
 3.2 表中入职时间（Hiredate字段）最短的人。
 ```sql
@@ -106,6 +110,7 @@ select * from ts5;
 ```
 
 
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/4.png)
 
 3.3 有几种职位（job字段）？在关系代数中，本操作是什么运算？
 
@@ -118,7 +123,7 @@ select * from ts5;
 ```
 
 
-
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/5.png)
 
 
 3.5 计算每个人的收入(ename, sal + comm)；计算总共有多少人；计算所有人的平均收入。 提示：计算时 NULL 要当做 0 处理； 
@@ -129,7 +134,12 @@ select * from ts5;
    from ((ts5 t1 inner join ts5 t2 on t1.mgr=t2.empno) inner join ts5 t3 on t2.mgr=t3.empno) inner join ts5 t4 
    on t3.mgr=t4.empno;
 ```
-使用了内连接
+
+
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/6.png)
+
+
+**答**：使用了内连接
 
 
 
@@ -144,8 +154,10 @@ select * from ts5;
  ```
  
  
- 
- **原因**：为了透过本视图看到自己感兴趣的数据及其变化
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/7.png) 
+
+
+**原因**：为了透过本视图看到自己感兴趣的数据及其变化
  
  
 
@@ -163,7 +175,12 @@ select * from ts5;
 ```sql
     create index indexname on ts5(ename)
 ```
-因为名字具有唯一性
+
+
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/9.png)
+
+
+**答**:因为名字具有唯一性
 
 
 3.10 将表2的 sal 字段改名为 salary
@@ -171,6 +188,9 @@ select * from ts5;
   alter table ts5
   change sal salary varchar(45);
 ```
+
+
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/10.png)
 
 3.11 撰写一个函数 get_deptno_from_empno，输入 empno，输出对应的 deptno。 简述函数和存储过程有什么不同。
 ```sql
@@ -183,6 +203,9 @@ select * from ts5;
     
     select get_dempno_from_empno(7499);
 ```
+
+
+![](https://github.com/liuxiaojuan95/mysql-final-test/blob/master/images/11.png)
 
 
 4 建立一个新用户，账号为自己的姓名拼音，密码为自己的学号；
