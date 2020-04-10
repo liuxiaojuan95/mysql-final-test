@@ -152,9 +152,10 @@ select * from ts5;
 
 3.8 为表2增加一个约束：deptno字段需要在表1中存在；这称做什么完整性？
 ```sql
-   alter ts5
-   constraint ts5_fk2 foreign key(deptno) references ts4(depno);
+    alter table ts5
+    add constraint fk_dempno foreign key(deptno) references ts4(deptno);
 ```
+
 这是参照完整性
 
 
@@ -174,13 +175,13 @@ select * from ts5;
 3.11 撰写一个函数 get_deptno_from_empno，输入 empno，输出对应的 deptno。 简述函数和存储过程有什么不同。
 ```sql
     delimiter $$
-    create function get_deptno_from_empno(empno int)
+    create function get_dempno_from_empno(empno int)
     returns int
     begin
-    return(select deptno from ts5 where ts5.empno=empno);
+    return(select dempno from ts5 where ts5.empno=empno);
     end$$
     
-    select get_deptno_from_empno(7499);
+    select get_dempno_from_empno(7499);
 ```
 
 
